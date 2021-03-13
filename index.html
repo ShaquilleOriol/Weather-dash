@@ -8,47 +8,38 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <header class="jumbotron bg-primary">
+    <header class="bg-primary text-center text-white">
         <h1> What's the Weather? </h1>
     </header>
-    <div class="container-fluid">
+    <main class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <h5>INSERT DESIRED CITY</h5>
-                <input id="usersInput" type="text" />
-                <button id="forecastBtn" class="btn btn-primary">Search</button>
-                <div id= "recentSearch"></div>
-            </div>
-            <div class="col-md-9">
-            <div id="currentforecast"></div>
-            <div id="weeklyForecast"></div>
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h6 id="city" class="card-title"></h6>
-                            <p id="Temperature" class="card-text">Temperature:</p>
-                            <p id="Wind" class="card-text">Wind Speed:</p>
-                            <p id="Humidity" class="card-text">Humidity:</p>
-                            <p id="Uv" class="card-text">UV Index:</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div id="day1" class="col-2"></div>
-                      <div id="day2" class="col-2"></div>
-                      <div id="day3" class="col-2"></div>
-                      <div id="day4" class="col-2"></div>
-                      <div id="day5" class="col-2"></div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-md-3 search-column">
+              <div class="card-header">
+                <div class="form-group" method="POST" id="form-group" data-list="list">
+                <label>Search desired city:</label>
+                <form>
+                  <input id="citySearch">
+                  <button id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+                </form>
               </div>
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      </div>
+      <div class="col-12 col-md-9 pt-lg-5">
+        <div class="container-fluid">
+          <div class="card mb-lg-5">
+            <div class="card-header card text-center">
+              <h3 class="city font-wieght-bold"></h3>
+              <h5 class="date"></h5>
+              <h5 class="temperture"></h5>
+              <h5 class="humidity"></h5>
+              <h5 class="windspeed"></h5>
+              <h5 class="uv"></h5>
+            </div>
+            <div class="d-flex" id="week-container"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </main>
+<script src="./script.js"></script>
 </body>
 </html>
